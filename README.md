@@ -1,37 +1,40 @@
 🚀 Employee Management System – Frontend
+📌 Overview
 
-A modern Admin Dashboard UI built with React (Vite) and Tailwind CSS for managing Employees and Departments.
+The Employee Management System (Frontend) is a modern Admin Dashboard application built using React (Vite) and Tailwind CSS.
 
-This application connects to a Spring Boot backend and demonstrates clean architecture, reusable components, state management, API integration, and UI/UX best practices.
+It allows management of Employees and Departments through a clean, responsive, SaaS-style interface.
+
+This frontend integrates with a Spring Boot backend and demonstrates modern frontend development practices including API integration, component-based architecture, UI state management, and protected administrative actions.
 
 🎯 Project Objective
 
-To build a production-style Admin Dashboard that demonstrates:
+The primary objective of this project is to:
 
-CRUD operations with API integration
+Build a production-style Admin Dashboard.
 
-Modern UI design principles
+Implement full CRUD functionality using REST APIs.
 
-Component-based architecture
+Demonstrate clean folder architecture and reusable components.
 
-State management using React Hooks
+Apply modern UI/UX best practices.
 
-Route management
+Add a security layer using PIN-based action protection.
 
-Secure admin action handling (PIN protection)
+Showcase React Hooks and API integration skills.
 
 ✨ Core Features
 📊 Dashboard
 
 Employee profile cards
 
-Real-time search
+Search functionality
 
 Responsive grid layout
 
-Smooth animations using Framer Motion
-
 Dark / Light theme toggle
+
+Smooth animations using Framer Motion
 
 👨‍💼 Employee Management
 
@@ -43,9 +46,9 @@ Delete Employee
 
 Department mapping
 
-Card-based layout
+Card-based UI layout
 
-Admin PIN protection before critical actions
+PIN-protected admin actions
 
 🏢 Department Management
 
@@ -55,13 +58,15 @@ Update Department
 
 Delete Department
 
-Modern animated department cards
+Animated department cards
 
-PIN-protected actions
+PIN-protected critical actions
 
 🔐 Security Layer (UI-Level)
 
-Admin PIN required for:
+The application includes a simple security mechanism:
+
+Admin PIN required before:
 
 Add
 
@@ -71,25 +76,25 @@ Delete
 
 Reusable PinModal component
 
-Action-based verification logic
+Action-based verification system
 
-Note: PIN validation is frontend-based for demonstration purposes.
+Note: PIN validation is implemented on the frontend for demonstration purposes. In a production environment, backend authentication (JWT / Role-based access control) should be implemented.
 
 🎨 UI & UX Highlights
 
 Fully responsive layout
 
-Tailwind CSS utility-based styling
+Utility-first styling with Tailwind CSS
 
-Gradient CTA buttons
+Gradient action buttons
 
-Dark mode support (darkMode: "class")
+Dark mode support using darkMode: "class"
 
-Framer Motion animations
+Framer Motion animations for smooth interactions
 
 Toast notifications for user feedback
 
-Clean SaaS-style layout
+Clean SaaS-style dashboard design
 
 🛠 Tech Stack
 
@@ -106,52 +111,3 @@ Framer Motion
 Lucide Icons
 
 React Hot Toast
-
-📁 Project Structure
-src/
- ├── api/
- │    ├── axios.js
- │    ├── departmentApi.js
- │    └── employeeApi.js
- │
- ├── components/
- │    ├── Navbar.jsx
- │    ├── Sidebar.jsx
- │    ├── PinModal.jsx
- │    └── Loader.jsx
- │
- ├── layout/
- │    └── MainLayout.jsx
- │
- ├── pages/
- │    ├── Dashboard.jsx
- │    ├── Employee.jsx
- │    └── Departments.jsx
- │
- ├── App.jsx
- └── main.jsx
-⚙️ Setup Instructions
-1️⃣ Clone Repository
-git clone https://github.com/your-username/EmployeeManagementSystemFrontend.git
-cd EmployeeManagementSystemFrontend
-2️⃣ Install Dependencies
-npm install
-3️⃣ Run Development Server
-npm run dev
-
-Application runs at:
-
-http://localhost:5173
-🌐 Backend Configuration
-
-Ensure backend is running.
-
-Update axios.js:
-
-import axios from "axios";
-
-export default axios.create({
-  baseURL: "https://your-backend-url.onrender.com/api",
-});
-🚀 Production Build
-npm run build
