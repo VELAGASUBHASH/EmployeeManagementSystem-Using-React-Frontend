@@ -1,16 +1,157 @@
-# React + Vite
+🚀 Employee Management System – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Admin Dashboard UI built with React (Vite) and Tailwind CSS for managing Employees and Departments.
 
-Currently, two official plugins are available:
+This application connects to a Spring Boot backend and demonstrates clean architecture, reusable components, state management, API integration, and UI/UX best practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎯 Project Objective
 
-## React Compiler
+To build a production-style Admin Dashboard that demonstrates:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+CRUD operations with API integration
 
-## Expanding the ESLint configuration
+Modern UI design principles
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Component-based architecture
+
+State management using React Hooks
+
+Route management
+
+Secure admin action handling (PIN protection)
+
+✨ Core Features
+📊 Dashboard
+
+Employee profile cards
+
+Real-time search
+
+Responsive grid layout
+
+Smooth animations using Framer Motion
+
+Dark / Light theme toggle
+
+👨‍💼 Employee Management
+
+Add Employee
+
+Update Employee
+
+Delete Employee
+
+Department mapping
+
+Card-based layout
+
+Admin PIN protection before critical actions
+
+🏢 Department Management
+
+Add Department
+
+Update Department
+
+Delete Department
+
+Modern animated department cards
+
+PIN-protected actions
+
+🔐 Security Layer (UI-Level)
+
+Admin PIN required for:
+
+Add
+
+Edit
+
+Delete
+
+Reusable PinModal component
+
+Action-based verification logic
+
+Note: PIN validation is frontend-based for demonstration purposes.
+
+🎨 UI & UX Highlights
+
+Fully responsive layout
+
+Tailwind CSS utility-based styling
+
+Gradient CTA buttons
+
+Dark mode support (darkMode: "class")
+
+Framer Motion animations
+
+Toast notifications for user feedback
+
+Clean SaaS-style layout
+
+🛠 Tech Stack
+
+React (Vite)
+
+Tailwind CSS
+
+Axios
+
+React Router DOM
+
+Framer Motion
+
+Lucide Icons
+
+React Hot Toast
+
+📁 Project Structure
+src/
+ ├── api/
+ │    ├── axios.js
+ │    ├── departmentApi.js
+ │    └── employeeApi.js
+ │
+ ├── components/
+ │    ├── Navbar.jsx
+ │    ├── Sidebar.jsx
+ │    ├── PinModal.jsx
+ │    └── Loader.jsx
+ │
+ ├── layout/
+ │    └── MainLayout.jsx
+ │
+ ├── pages/
+ │    ├── Dashboard.jsx
+ │    ├── Employee.jsx
+ │    └── Departments.jsx
+ │
+ ├── App.jsx
+ └── main.jsx
+⚙️ Setup Instructions
+1️⃣ Clone Repository
+git clone https://github.com/your-username/EmployeeManagementSystemFrontend.git
+cd EmployeeManagementSystemFrontend
+2️⃣ Install Dependencies
+npm install
+3️⃣ Run Development Server
+npm run dev
+
+Application runs at:
+
+http://localhost:5173
+🌐 Backend Configuration
+
+Ensure backend is running.
+
+Update axios.js:
+
+import axios from "axios";
+
+export default axios.create({
+  baseURL: "https://your-backend-url.onrender.com/api",
+});
+🚀 Production Build
+npm run build
